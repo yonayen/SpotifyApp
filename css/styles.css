@@ -1,0 +1,9 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url(../images/background.png);
+	background-size: 85%;
+	background-color: #D7FFF1;
+}
