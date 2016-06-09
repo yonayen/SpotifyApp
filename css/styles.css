@@ -45,12 +45,12 @@ h1,h2,h3,h4,h5,h6{
 	text-transform: uppercase;
 	font-size: 1.45em;
 	font-weight: 800;
-	color: #CC181E;
+	color: #274c5e;
 }
 
 #top_header .logo span {
 	font-weight: 500;
-	color: #737373;
+	color: #cbe86b;
 }
 
 #top_header #main_nav {
@@ -174,7 +174,7 @@ h1,h2,h3,h4,h5,h6{
 	outline: none;
 	padding: 1.6em 2.0em;
 	border-radius: 0.3em;
-	background: #CC181E;
+	background: #cbe86b;
 	color: #fff;
 	font-weight: 700;
 	font-size: .9em;
