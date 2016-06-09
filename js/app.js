@@ -18,17 +18,14 @@ $(function()
 function getRequest(searchTerm)
 {
 	$.getJSON(baseUrl + searchTerm + '&type=artist', function(data){
-		console.log((data.artists));
-		showResults(data.artists);
-		getRelated(data.artists.items.genres.id);
+		getRelated(data.artists.items[0].id);
 	});
 }
 
-function getRelated(firstResults)
+function getRelated(artistId)
 {
-	$.getJSON(relatedUrl + firstResults.artists.items.genres.id + '/related-artists', function(firstResults){
-		console.log((firstResults.artists));
-		showResults(data.artists);
+	$.getJSON(relatedUrl + artistId + '/related-artists', function(firstResults){
+		showResults(firstResults.artists);
 	});
 }
 
@@ -43,13 +40,12 @@ function showResults(results)
 		if (counter < 6) {
 			counter ++;
 			html += '<div class="row">' + '<div class="post">' +
-				'<a href="https://open.spotify.com/artist/'+ arrayitem.artists.items.genres.id + ' "><img src="' + arrayitem.artists.items.images.url + '"/></a>' +
-				'<h3 class="title">' + arrayitem.artists.items.name + '</h3>' +
-				'<p class="post_info">' + arrayitem.artists.items.genres + ' | ' + arrayitem.artists.items.popularity + '</p>'+ 
+				'<a href=' + arrayitem.external_urls.spotify + ' "><img src="' + arrayitem.images[1].url + '"/></a>' +
+				'<h3 class="title">' + arrayitem.name + '</h3>' +
+				'<p class="post_info">' + arrayitem.genres[0] + ' | ' + arrayitem.popularity + '</p>'+ 
 				'</div>' +
           '</div>';
 		}
-	 console.log(arrayitem.snippet.title);
 	});
 
 	$('#top_movies .wrapper').append(html);
