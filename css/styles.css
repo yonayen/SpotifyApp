@@ -50,7 +50,7 @@ h1,h2,h3,h4,h5,h6{
 
 #top_header .logo span {
 	font-weight: 500;
-	color: #cbe86b;
+	color: #fbd14b;
 }
 
 #top_header #main_nav {
@@ -174,7 +174,7 @@ h1,h2,h3,h4,h5,h6{
 	outline: none;
 	padding: 1.6em 2.0em;
 	border-radius: 0.3em;
-	background: #cbe86b;
+	background: #fbd14b;
 	color: #fff;
 	font-weight: 700;
 	font-size: .9em;
@@ -200,7 +200,7 @@ h1,h2,h3,h4,h5,h6{
 
 #main_footer .logo span {
 	font-weight: 300;
-	color: #CC181E;
+	color: #fbd14b;
 }
 
 #main_footer .copyright {
